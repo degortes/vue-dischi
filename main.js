@@ -7,10 +7,16 @@ var app = new Vue ({
         lookForGenre : ''
     },
     methods: {
-        sortedByYear(disc) {
+        sortByYear(disc) {
             return disc.sort(function(a, b) {
             return a.year - b.year;
             });
+        },
+        sortByTitle(disc) {
+            return disc.sort((a,b)=> (a.title > b.title? 1 : -1 ))
+        },
+        sortByAuthor(disc) {
+            return disc.sort((a,b)=> (a.author > b.author? 1 : -1 ))
         },
     },
     mounted() {

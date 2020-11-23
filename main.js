@@ -11,7 +11,6 @@ var app = new Vue ({
                 this.playlist = risposta.data.response;
                 console.log(this.playlist);
             });
-
     }
 
 

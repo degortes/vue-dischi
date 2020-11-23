@@ -12,7 +12,14 @@
         <div id="root">
             <header>
                 <h1>spotify</h1>
-                <input placeholder="scrivi un genere" type="text" name="" v-model="lookForGenre"value="">
+                <select v-model="lookForGenre" class="" name="">
+                    <option disabled value="">Seleziona un genere</option>
+                    <option>Rock</option>
+                    <option>Pop</option>
+                    <option>Jazz</option>
+                    <option>Metal</option>
+                </select>
+                <!-- <input placeholder="scrivi un genere" type="text" name="" v-model="lookForGenre"value=""> -->
             </header>
             <div class="card-container">
                 <div v-for="disc in playlist" class="card" v-if="disc.genre.toLowerCase().includes(lookForGenre.toLowerCase())">

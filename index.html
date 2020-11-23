@@ -18,7 +18,7 @@
                 </select>
             </header>
             <div class="card-container">
-                <div v-for="disc in playlist" class="card" v-if="disc.genre.toLowerCase().includes(lookForGenre.toLowerCase())">
+                <div v-for="disc in sortedByYear(playlist)" class="card" v-if="disc.genre.toLowerCase().includes(lookForGenre.toLowerCase())">
                     <img :src="disc.poster" alt="copertina album">
                     <h2>{{disc.title}}</h2>
                     <h2>{{disc.author}}</h2>

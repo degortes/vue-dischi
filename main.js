@@ -5,16 +5,22 @@ var app = new Vue ({
         playlist: [],
         lookForGenre : ''
     },
+    methods: {
+        sortedByYear: function(disc) {
+            return disc.sort(function(a, b) {
+            return a.year - b.year;
+            });
+        }
+    },
     mounted() {
 
             axios.get('https://flynn.boolean.careers/exercises/api/array/music')
             .then((risposta) => {
                 this.playlist = risposta.data.response;
-                console.log(this.playlist);
 
                 this.playlist.forEach((item, i) => {
-                    if (!this.genreList.includes(item.genre)) {
-                        this.genreList.push(item.genre);
+                    if (!this.genreList.includes(item.genre.toLowerCase())) {
+                        this.genreList.push(item.genre.toLowerCase());
                     }
                 });
 

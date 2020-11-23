@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.card-container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}
+
+
+.card {
+    width: 200px;
+    height: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: gold;
+    margin: 10px;
+}
+
+
+.card img {
+    height: 100px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 15px;
+}

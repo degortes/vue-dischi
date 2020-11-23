@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="master.css">
+        <title>spoty</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <header>
+                <h1>spotify</h1>
+            </header>
+            <div class="card-container">
+                <div v-for="disc in playlist" class="card">
+                    <img :src="disc.poster" alt="copertina album">
+                    <h2>{{disc.title}}</h2>
+                    <h2>{{disc.author}}</h2>
+                    <h3>{{disc.genre}}</h3>
+                    <h3>{{disc.year}}</h3>
+                </div>
+            </div>
+        </div>
+        <script src="main.js" charset="utf-8"></script>
+    </body>
+</html>

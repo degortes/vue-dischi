@@ -2,10 +2,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
+header {
+    background-color: black;
+    border-bottom: 1px solid white;
+    color: white;
+    min-height: 100px;
+}
+.cta {
+    text-align: center;
+}
+
+.cta button, .cta select {
+    padding: 5px;
+    background-color: azure;
+    margin: 5px;
+
+}
+main {
+    height: calc(100vh - 200px);
+    background-color: black;
+    overflow: auto;
+}
 
 .card-container {
+    padding: 20px;
+    height: 100%;
+    margin: auto;
+    max-width: 1170px;
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
@@ -32,4 +58,9 @@ h2 {
 
 h3 {
     font-size: 15px;
+}
+footer {
+    background-color: black;
+    border-top: 1px solid white;
+    height: 100px;
 }

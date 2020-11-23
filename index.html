@@ -11,24 +11,30 @@
     <body>
         <div id="root">
             <header>
-                <h1>spotify</h1>
-                <select v-model="lookForGenre" class="" name="">
-                    <option value="">Tutti i generi</option>
-                    <option v-for="genre in genreList">{{genre}}</option>
-                </select>
-                <button type="button" @click="funMeta = sortByYear(playlist)"name="button">ordina per anno </button>
-                <button type="button" @click="funMeta = sortByTitle(playlist)"name="button">ordina per titolo brano </button>
-                <button type="button" @click="funMeta = sortByAuthor(playlist)"name="button">ordina per artista </button>
-            </header>
-            <div class="card-container">
-                <div v-for="disc in funMeta" class="card" v-if="disc.genre.toLowerCase().includes(lookForGenre.toLowerCase())">
-                    <img :src="disc.poster" alt="copertina album">
-                    <h2>{{disc.title}}</h2>
-                    <h2>{{disc.author}}</h2>
-                    <h3>{{disc.genre}}</h3>
-                    <h3>{{disc.year}}</h3>
+                <h1>Spotify</h1>
+                <div class="cta">
+                    <select v-model="lookForGenre" class="" name="">
+                        <option value="">Tutti i generi</option>
+                        <option v-for="genre in genreList">{{genre}}</option>
+                    </select>
+                    <button type="button" @click="funMeta = sortByYear(playlist)"name="button">Ordina per anno </button>
+                    <button type="button" @click="funMeta = sortByTitle(playlist)"name="button">Ordina per titolo brano </button>
+                    <button type="button" @click="funMeta = sortByAuthor(playlist)"name="button">Ordina per artista </button>
+
                 </div>
-            </div>
+            </header>
+            <main>
+                <div class="card-container">
+                    <div v-for="disc in funMeta" class="card" v-if="disc.genre.toLowerCase().includes(lookForGenre.toLowerCase())">
+                        <img :src="disc.poster" alt="copertina album">
+                        <h2>{{disc.title}}</h2>
+                        <h2>{{disc.author}}</h2>
+                        <h3>{{disc.genre}}</h3>
+                        <h3>{{disc.year}}</h3>
+                    </div>
+                </div>
+            </main>
+            <footer></footer>
         </div>
         <script src="main.js" charset="utf-8"></script>
     </body>

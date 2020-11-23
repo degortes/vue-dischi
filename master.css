@@ -11,16 +11,24 @@ header {
     color: white;
     min-height: 100px;
 }
+
+h1 {
+    padding: 5px;
+    margin: 0 20px;
+
+}
 .cta {
     text-align: center;
 }
 
 .cta button, .cta select {
+    font-size: 14px;
+    border-radius: 3px;
     padding: 5px;
     background-color: azure;
     margin: 5px;
-
 }
+
 main {
     height: calc(100vh - 200px);
     background-color: black;
@@ -37,28 +45,40 @@ main {
     justify-content: center;
 }
 
-
 .card {
     width: 200px;
-    height: 250px;
+    height: 300px;
     padding: 10px;
     border-radius: 5px;
-    background-color: gold;
+    background-color: #b5adb4;
     margin: 10px;
 }
 
+.card:hover {
+    background-color: #b5cdb4;
+}
+
+.card.active {
+    background-color: #b5cdb4;
+}
 
 .card img {
-    height: 100px;
+    width: 180px;
+    height: 180px;
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 17px;
 }
 
 h3 {
     font-size: 15px;
 }
+
+h4 {
+    font-size: 14px;
+}
+
 footer {
     background-color: black;
     border-top: 1px solid white;

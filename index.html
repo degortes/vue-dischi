@@ -20,7 +20,6 @@
                     <button type="button" @click="sortByYear()"name="button">Ordina per anno </button>
                     <button type="button" @click="sortByTitle()"name="button">Ordina per titolo brano </button>
                     <button type="button" @click="sortByAuthor()"name="button">Ordina per artista </button>
-
                 </div>
             </header>
             <main>
@@ -28,9 +27,9 @@
                     <div v-for="disc in playlist" class="card" v-if="disc.genre.toLowerCase().includes(lookForGenre.toLowerCase())">
                         <img :src="disc.poster" alt="copertina album">
                         <h2>{{disc.title}}</h2>
-                        <h2>{{disc.author}}</h2>
-                        <h3>{{disc.genre}}</h3>
-                        <h3>{{disc.year}}</h3>
+                        <h3>{{disc.author}}</h3>
+                        <h4>{{disc.genre}}</h4>
+                        <h4>{{disc.year}}</h4>
                     </div>
                 </div>
             </main>

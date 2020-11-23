@@ -17,29 +17,15 @@ var app = new Vue ({
         },
     },
     mounted() {
-
-            axios.get('https://flynn.boolean.careers/exercises/api/array/music')
-            .then((risposta) => {
-                this.playlist = risposta.data.response;
-                //genero in automatico la lista per i generi musicali
-                this.playlist.forEach((item, i) => {
-                    if (!this.genreList.includes(item.genre.toLowerCase())) {
-                        this.genreList.push(item.genre.toLowerCase());
-                    }
-                });
-
+        axios.get('https://flynn.boolean.careers/exercises/api/array/music')
+        .then((risposta) => {
+            this.playlist = risposta.data.response;
+            //genero in automatico la lista per i generi musicali
+            this.playlist.forEach((item, i) => {
+                if (!this.genreList.includes(item.genre.toLowerCase())) {
+                    this.genreList.push(item.genre.toLowerCase());
+                }
             });
-
+        });
     }
-
-
-
-
-
-
-
-
-
-
-
 });

@@ -14,10 +14,7 @@
                 <h1>spotify</h1>
                 <select v-model="lookForGenre" class="" name="">
                     <option value="">Tutti i generi</option>
-                    <option>Rock</option>
-                    <option>Pop</option>
-                    <option>Jazz</option>
-                    <option>Metal</option>
+                    <option v-for="genre in genreList">{{genre}}</option>
                 </select>
             </header>
             <div class="card-container">

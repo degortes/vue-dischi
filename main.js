@@ -1,6 +1,7 @@
 var app = new Vue ({
     el: '#root',
     data: {
+        genreList: [],
         playlist: [],
         lookForGenre : ''
     },
@@ -10,7 +11,16 @@ var app = new Vue ({
             .then((risposta) => {
                 this.playlist = risposta.data.response;
                 console.log(this.playlist);
+
+                this.playlist.forEach((item, i) => {
+                    if (!this.genreList.includes(item.genre)) {
+                        this.genreList.push(item.genre);
+                    }
+                });
+
+
             });
+
     }
 
 

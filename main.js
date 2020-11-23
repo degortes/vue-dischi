@@ -6,16 +6,14 @@ var app = new Vue ({
         lookForGenre : ''
     },
     methods: {
-        sortByYear(disc) {
-            return disc.sort(function(a, b) {
-            return a.year - b.year;
-            });
+        sortByYear() {
+            this.playlist.sort((a,b) => (a.year - b.year));
         },
-        sortByTitle(disc) {
-            return disc.sort((a,b)=> (a.title > b.title? 1 : -1 ))
+        sortByTitle() {
+            this.playlist.sort((a,b)=> (a.title > b.title? 1 : -1 ))
         },
-        sortByAuthor(disc) {
-            return disc.sort((a,b)=> (a.author > b.author? 1 : -1 ))
+        sortByAuthor() {
+            this.playlist.sort((a,b)=> (a.author > b.author? 1 : -1 ))
         },
     },
     mounted() {
@@ -29,7 +27,6 @@ var app = new Vue ({
                         this.genreList.push(item.genre.toLowerCase());
                     }
                 });
-
 
             });
 

@@ -17,9 +17,9 @@
                         <option value="">Tutti i generi</option>
                         <option v-for="genre in genreList">{{genre}}</option>
                     </select>
-                    <button type="button" @click="playlist = sortByYear(playlist)"name="button">Ordina per anno </button>
-                    <button type="button" @click="playlist = sortByTitle(playlist)"name="button">Ordina per titolo brano </button>
-                    <button type="button" @click="playlist = sortByAuthor(playlist)"name="button">Ordina per artista </button>
+                    <button type="button" @click="sortByYear()"name="button">Ordina per anno </button>
+                    <button type="button" @click="sortByTitle()"name="button">Ordina per titolo brano </button>
+                    <button type="button" @click="sortByAuthor()"name="button">Ordina per artista </button>
 
                 </div>
             </header>
